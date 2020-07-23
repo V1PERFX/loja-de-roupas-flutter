@@ -87,7 +87,7 @@ class PedidosTile extends StatelessWidget {
       backCor = Colors.grey[500];
       filho = Text(titulo, style: TextStyle(color: Colors.white));
     } else if(status == thisStatus){
-      backCor = Colors.blue;
+      backCor = Colors.blue[600];
       filho = Stack(
         alignment: Alignment.center,
         children: <Widget>[
@@ -98,7 +98,7 @@ class PedidosTile extends StatelessWidget {
         ],
       );
     } else {
-      backCor = Colors.green;
+      backCor = Colors.green[600];
       filho = Icon(Icons.check, color: Colors.white,);
     }
 

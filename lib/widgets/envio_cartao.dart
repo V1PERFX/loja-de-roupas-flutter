@@ -20,7 +20,12 @@ class EnvioCartao extends StatelessWidget {
             padding: EdgeInsets.all(8),
             child: TextFormField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.amber[900]),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey[500]),
+                ),
                 hintText: "Digite seu CEP",
               ),
               initialValue: "",

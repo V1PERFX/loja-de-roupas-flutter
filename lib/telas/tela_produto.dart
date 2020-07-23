@@ -28,13 +28,11 @@ class _TelaProdutoState extends State<TelaProduto> {
   @override
   Widget build(BuildContext context) {
 
-    final Color corPrimaria = Theme.of(context).primaryColor;
-
     return Scaffold(
       appBar: AppBar(
         title: Text(dados.titulo),
         centerTitle: true,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.amber[800],
       ),
       body: ListView(
         children: <Widget>[
@@ -47,8 +45,8 @@ class _TelaProdutoState extends State<TelaProduto> {
               dotSize: 4,
               dotSpacing: 15,
               dotBgColor: Colors.transparent,
-              dotIncreasedColor: Colors.redAccent,
-              dotColor: corPrimaria,
+              dotIncreasedColor: Colors.blue[800],
+              dotColor: Colors.amber[900],
               autoplay: false,
             ),
           ),
@@ -70,7 +68,7 @@ class _TelaProdutoState extends State<TelaProduto> {
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
-                    color: corPrimaria,
+                    color: Colors.blue[800],
                   ),
                 ),
                 SizedBox(height: 16,),
@@ -103,7 +101,7 @@ class _TelaProdutoState extends State<TelaProduto> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(4)),
                               border: Border.all(
-                                color: tam == tamanho ? corPrimaria : Colors.grey[500],
+                                color: tam == tamanho ? Colors.amber[900] : Colors.grey[500],
                                 width: 3,
                               ),
                             ),
@@ -145,7 +143,7 @@ class _TelaProdutoState extends State<TelaProduto> {
                       : "Entre Para Comprar",
                       style: TextStyle(fontSize: 18),
                     ),
-                    color: corPrimaria,
+                    color: Colors.blue[800],
                     textColor: Colors.white,
                   ),
                 ),

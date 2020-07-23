@@ -26,7 +26,7 @@ class GavetaTile extends StatelessWidget {
                 icone,
                 size: 32,
                 color: controlador.page.round() == pagina ?
-                  Theme.of(context).primaryColor : Colors.grey[700],
+                  Colors.amber[900] : Colors.grey[700],
               ),
               SizedBox(width: 32,),
               Text(
@@ -35,7 +35,7 @@ class GavetaTile extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                   color: controlador.page.round() == pagina ?
-                    Theme.of(context).primaryColor : Colors.grey[700],
+                    Colors.blue[800] : Colors.grey[700],
                 ),
               ),
             ],

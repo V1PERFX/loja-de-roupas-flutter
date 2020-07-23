@@ -22,7 +22,7 @@ class _TelaInscricaoState extends State<TelaInscricao> {
     return Scaffold(
       key: _scaffoldChave,
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.amber[800],
         title: Text("Criar Conta"),
         centerTitle: true,
       ),
@@ -103,7 +103,7 @@ class _TelaInscricaoState extends State<TelaInscricao> {
                   ),
                 ),
               textColor: Colors.white,
-              color: Theme.of(context).primaryColor,
+              color: Colors.blue[800],
               onPressed: (){
                 if(_formChave.currentState.validate()) {
 
@@ -135,8 +135,8 @@ class _TelaInscricaoState extends State<TelaInscricao> {
   void _noSucesso() {
     _scaffoldChave.currentState.showSnackBar(
       SnackBar(
-        content: Text("Usuário criado com sucesso!"),
-        backgroundColor: Theme.of(context).primaryColor,
+        content: Text("Usuário criado com sucesso!", style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.blue[800],
         duration: Duration(seconds: 2),
       )
     );
@@ -148,8 +148,8 @@ class _TelaInscricaoState extends State<TelaInscricao> {
   void _naFalha() {
     _scaffoldChave.currentState.showSnackBar(
       SnackBar(
-        content: Text("Falha ao criar usuário!"),
-        backgroundColor: Colors.redAccent,
+        content: Text("Falha ao criar usuário!", style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.redAccent[700],
         duration: Duration(seconds: 2),
       )
     );

@@ -17,8 +17,8 @@ class GavetaPersonalizada extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 203, 236, 241),
-            Color.fromARGB(255, 255, 255, 255),
+            Colors.blue[100],
+            Colors.amber[100],
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -42,7 +42,7 @@ class GavetaPersonalizada extends StatelessWidget {
                     Positioned(
                       top: 8,
                       left: 0,
-                      child: Text("Bella's\nFashion",
+                      child: Text("Loja\nFashion",
                         style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -54,7 +54,7 @@ class GavetaPersonalizada extends StatelessWidget {
                           return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text("Olá, ${!model.estaLogado() ? "" : model.usuarioData["nome"]}",
+                          Text("Olá, ${!model.estaLogado() ? "Visitante" : model.usuarioData["nome"]}",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class GavetaPersonalizada extends StatelessWidget {
                               "Entre ou cadastre-se >"
                               : "Sair",
                               style: TextStyle(
-                                color: Theme.of(context).primaryColor,
+                                color: Colors.amber[900],
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -93,8 +93,8 @@ class GavetaPersonalizada extends StatelessWidget {
               Divider(),
               GavetaTile(Icons.home, "Início", controladorPagina, 0),
               GavetaTile(Icons.list, "Produtos", controladorPagina, 1),
-              GavetaTile(Icons.location_on, "Lojas", controladorPagina, 2),
               GavetaTile(Icons.playlist_add_check, "Meus Pedidos", controladorPagina, 3),
+              GavetaTile(Icons.location_on, "Lojas", controladorPagina, 2),
             ],
           ),
         ],

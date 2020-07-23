@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
           return ScopedModel<ModeloCarrinho>(
         model: ModeloCarrinho(model),
         child: MaterialApp(
-          title: "Bella Fashion",
+          title: "Loja Fashion",
           theme: ThemeData(
-              primarySwatch: Colors.blue,
-              primaryColor: Color.fromARGB(255, 4, 125, 141)),
+              primaryColor: Colors.blue[800],
+          ),
           debugShowCheckedModeBanner: false,
           home: TelaInicial(),
         ),

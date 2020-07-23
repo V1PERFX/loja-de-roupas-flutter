@@ -14,6 +14,7 @@ class TelaCarrinho extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.amber[800],
         title: Text("Meu Carrinho"),
         actions: <Widget>[
           Container(
@@ -45,7 +46,7 @@ class TelaCarrinho extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Icon(Icons.remove_shopping_cart, 
-                    size: 80, color: Theme.of(context).primaryColor,),
+                    size: 80, color: Colors.amber[900],),
                   SizedBox(height: 16,),
                   Text("Faça o login para adicionar produtos!",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -55,7 +56,7 @@ class TelaCarrinho extends StatelessWidget {
                   RaisedButton(
                     child: Text("Entrar", style: TextStyle(fontSize: 18),),
                     textColor: Colors.white,
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.blue[800],
                     onPressed: (){
                       Navigator.of(context).push(
                         MaterialPageRoute(builder: (context)=>TelaLogin())

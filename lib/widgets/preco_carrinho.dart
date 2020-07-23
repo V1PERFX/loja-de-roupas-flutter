@@ -62,7 +62,7 @@ class PrecoCarrinho extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                     Text("R\$ ${(preco + envio - desconto).toStringAsFixed(2)}",
-                      style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 16),
+                      style: TextStyle(color: Colors.amber[900], fontSize: 16),
                     ),
                   ],
                 ),
@@ -70,7 +70,7 @@ class PrecoCarrinho extends StatelessWidget {
                 RaisedButton(
                   child: Text("Finalizar Pedido"),
                   textColor: Colors.white,
-                  color: Theme.of(context).primaryColor,
+                  color: Colors.blue[800],
                   onPressed: comprar,
                 ),
               ],

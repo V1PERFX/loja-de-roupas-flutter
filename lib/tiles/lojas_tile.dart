@@ -47,7 +47,7 @@ class LojasTile extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 child: Text("Ver no mapa"),
-                textColor: Colors.blue,
+                textColor: Colors.blue[800],
                 padding: EdgeInsets.zero,
                 onPressed: (){
                   launch("https://www.google.com/maps/search/?api=1&query=${snapshot.data["latitude"]},"
@@ -56,7 +56,7 @@ class LojasTile extends StatelessWidget {
               ),
               FlatButton(
                 child: Text("Ligar"),
-                textColor: Colors.blue,
+                textColor: Colors.blue[800],
                 padding: EdgeInsets.zero,
                 onPressed: (){
                   launch("tel:${snapshot.data["telefone"]}");

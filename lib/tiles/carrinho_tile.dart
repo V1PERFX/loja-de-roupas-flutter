@@ -43,7 +43,7 @@ class CarrinhoTile extends StatelessWidget {
                   Text(
                     "R\$ ${carrinhoProduto.dadosProduto.preco.toStringAsFixed(2)}",
                     style: TextStyle(
-                      color: Theme.of(context).primaryColor,
+                      color: Colors.blue[800],
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
@@ -53,7 +53,7 @@ class CarrinhoTile extends StatelessWidget {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Icons.remove),
-                        color: Theme.of(context).primaryColor,
+                        color: Colors.amber[900],
                         onPressed: carrinhoProduto.quantidade > 1 ?
                         (){
                           ModeloCarrinho.of(context).decProduto(carrinhoProduto);
@@ -62,7 +62,7 @@ class CarrinhoTile extends StatelessWidget {
                       Text(carrinhoProduto.quantidade.toString()),
                       IconButton(
                         icon: Icon(Icons.add),
-                        color: Theme.of(context).primaryColor,
+                        color: Colors.amber[900],
                         onPressed: (){
                           ModeloCarrinho.of(context).incProduto(carrinhoProduto);
                         },

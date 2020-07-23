@@ -11,8 +11,8 @@ class AbaInicial extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 238, 174, 202),
-            Color.fromARGB(255, 148, 187, 233),
+            Colors.amber[900],
+            Colors.amberAccent,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

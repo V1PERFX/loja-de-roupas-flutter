@@ -20,7 +20,7 @@ class _TelaLoginState extends State<TelaLogin> {
     return Scaffold(
       key: _scaffoldChave,
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.amber[800],
         title: Text("Entrar"),
         centerTitle: true,
         actions: <Widget>[
@@ -89,15 +89,15 @@ class _TelaLoginState extends State<TelaLogin> {
                       onPressed: () {
                         if (_emailControle.text.isEmpty) {
                           _scaffoldChave.currentState.showSnackBar(SnackBar(
-                            content: Text("Insira seu e-mail para recuperção!"),
-                            backgroundColor: Colors.redAccent,
+                            content: Text("Insira seu e-mail para recuperção!", style: TextStyle(color: Colors.white),),
+                            backgroundColor: Colors.redAccent[700],
                             duration: Duration(seconds: 2),
                           ));
                         } else {
                           model.recuperarSenha(_emailControle.text);
                           _scaffoldChave.currentState.showSnackBar(SnackBar(
                             content: Text("Confira seu e-mail!"),
-                            backgroundColor: Theme.of(context).primaryColor,
+                            backgroundColor: Colors.blue[800],
                             duration: Duration(seconds: 2),
                           ));
                         }
@@ -122,7 +122,7 @@ class _TelaLoginState extends State<TelaLogin> {
                         ),
                       ),
                       textColor: Colors.white,
-                      color: Theme.of(context).primaryColor,
+                      color: Colors.blue[800],
                       onPressed: () {
                         if (_formChave.currentState.validate()) {}
                         model.entrar(
@@ -149,7 +149,7 @@ class _TelaLoginState extends State<TelaLogin> {
   void _naFalha() {
     _scaffoldChave.currentState.showSnackBar(SnackBar(
       content: Text("Falha ao entrar!"),
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.redAccent[700],
       duration: Duration(seconds: 2),
     ));
   }

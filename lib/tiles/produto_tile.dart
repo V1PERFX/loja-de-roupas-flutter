@@ -45,7 +45,7 @@ class ProdutoTile extends StatelessWidget {
                       Text(
                         "R\$ ${dados.preco.toStringAsFixed(2)}",
                         style: TextStyle(
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.amber[900],
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),
@@ -87,7 +87,7 @@ class ProdutoTile extends StatelessWidget {
                       Text(
                         "R\$ ${dados.preco.toStringAsFixed(2)}",
                         style: TextStyle(
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.amber[900],
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),

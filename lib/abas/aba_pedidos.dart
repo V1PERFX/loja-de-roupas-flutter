@@ -37,7 +37,7 @@ class AbaPedidos extends StatelessWidget {
             Icon(
               Icons.view_list,
               size: 80,
-              color: Theme.of(context).primaryColor,
+              color: Colors.amber[900],
             ),
             SizedBox(
               height: 16,
@@ -56,7 +56,7 @@ class AbaPedidos extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               textColor: Colors.white,
-              color: Theme.of(context).primaryColor,
+              color: Colors.blue[800],
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => TelaLogin()));

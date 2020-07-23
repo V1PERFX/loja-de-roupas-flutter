@@ -10,6 +10,7 @@ class TelaPedido extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue[800],
         title: Text("Finalização Pedido"),
         centerTitle: true,
       ),
@@ -20,7 +21,7 @@ class TelaPedido extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(Icons.check,
-              color: Theme.of(context).primaryColor,
+              color: Colors.amber[900],
               size: 80,
             ),
             Text("Pedido realizado com sucesso!",

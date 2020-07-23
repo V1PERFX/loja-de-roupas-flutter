@@ -26,7 +26,7 @@ class TelaInicial extends StatelessWidget {
           appBar: AppBar(
             title: Text("Produtos"),
             centerTitle: true,
-            backgroundColor: Color.fromARGB(255, 238, 174, 202),
+            backgroundColor: Colors.amber[800],
           ),
           drawer: GavetaPersonalizada(_controladorPagina),
           body: AbaProdutos(),
@@ -34,6 +34,7 @@ class TelaInicial extends StatelessWidget {
         ),
         Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.amber[800],
             title: Text("Lojas"),
             centerTitle: true,
           ),
@@ -42,6 +43,7 @@ class TelaInicial extends StatelessWidget {
         ),
         Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.blue[800],
             title: Text("Meus Pedidos"),
             centerTitle: true,
           ),

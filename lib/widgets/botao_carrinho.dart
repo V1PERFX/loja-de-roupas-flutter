@@ -11,7 +11,7 @@ class BotaoCarrinho extends StatelessWidget {
           MaterialPageRoute(builder: (context)=>TelaCarrinho())
         );
       },
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.blue[800],
     );
   }
 }

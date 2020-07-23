@@ -15,7 +15,7 @@ class TelaCategoria extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.blue[800],
           title: Text(snapshot.data["titulo"]),
           centerTitle: true,
           bottom: TabBar(

@@ -23,7 +23,12 @@ class DescontoCartao extends StatelessWidget {
             padding: EdgeInsets.all(8),
             child: TextFormField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.amber[900]),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey[500]),
+                ),
                 hintText: "Digite seu cupom",
               ),
               initialValue: ModeloCarrinho.of(context).codigoCupom ?? "",
@@ -34,16 +39,18 @@ class DescontoCartao extends StatelessWidget {
                       ModeloCarrinho.of(context).aplicaCupom(texto, docSnap.data["porcentagem"]);
                       Scaffold.of(context).showSnackBar(
                         SnackBar(
-                          content: Text("Desconto de ${docSnap.data["porcentagem"]}% aplicado!"),
-                          backgroundColor: Theme.of(context).primaryColor,
+                          content: Text("Desconto de ${docSnap.data["porcentagem"]}% aplicado!",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          backgroundColor: Colors.blue[800],
                         ),
                       );
                     } else {
                       ModeloCarrinho.of(context).aplicaCupom(null, 0);
                       Scaffold.of(context).showSnackBar(
                         SnackBar(
-                          content: Text("Cupom não existente!"),
-                          backgroundColor: Colors.redAccent,
+                          content: Text("Cupom não existente!", style: TextStyle(color: Colors.white),),
+                          backgroundColor: Colors.redAccent[700],
                         ),
                       );
                     }
